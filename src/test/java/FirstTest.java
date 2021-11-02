@@ -12,6 +12,7 @@ public class FirstTest {
 
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.warmdevs.com/");
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         driver.findElement(By.linkText("Start a project")).click();
         driver.findElement(By.xpath("//*[@id=\"email-form\"]/div[2]/div[2]/label/input")).click();
         driver.findElement(By.xpath("//*[@id=\"NAME-2\"]")).sendKeys("Sans");
